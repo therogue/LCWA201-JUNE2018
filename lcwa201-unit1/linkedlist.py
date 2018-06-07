@@ -5,5 +5,8 @@ class LinkedList:
         self.next = None
     
     def __str__(self):
-        return self.data
+        return str(self.data)
 
+node = LinkedList(1)
+
+print(node)
