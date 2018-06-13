@@ -10,24 +10,28 @@ class LinkedList:
         return str(self.data) + '[DOES NOT].'
     
     def last(self):
-        return None     # Change this to return the last element of the list
+        node = self
+        while node.next is not None:
+            node = node.next
+        return node  # Change this to return the last element of the list
 
 
 # main starts here -----------
 
 node = LinkedList('apples')
 
-print(node)
+#print(node)
 
 nextnode = LinkedList('bananas')
 
-print(nextnode)
+#print(nextnode)
 
 node.next = nextnode
 
-print(node)
+#print(node)
 
 nextnode.next = LinkedList('kiwis')
 
-print(nextnode)
-print(node)
+#print(node)
+
+print(LinkedList.last(node))
